@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Davi Coutinho</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #1e88e5; /* Azul do Portal Facilita para identidade visual */
+            --dark-bg: #2c3e50;
+            --text-grey: #555;
+            --bg-grey: #f4f6f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        
+        body { background: #e0e0e0; display: flex; justify-content: center; padding: 40px 0; }
+
+        /* Folha A4 */
+        .resume-page {
+            background: white;
+            width: 21cm;
+            min-height: 29.7cm;
+            display: flex;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        /* --- COLUNA ESQUERDA (LATERAL) --- */
+        .left-col {
+            width: 35%;
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.2);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .contact-section { margin-top: 30px; width: 100%; text-align: left; }
+        
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            word-break: break-all;
+        }
+        
+        .contact-item i { width: 20px; color: var(--primary-color); }
+        .contact-item a { color: white; text-decoration: none; transition: 0.2s; }
+        .contact-item a:hover { color: var(--primary-color); }
+
+        .skills-section { margin-top: 40px; width: 100%; text-align: left; }
+        .section-title-side {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+        }
+
+        /* --- COLUNA DIREITA (CONTEÚDO) --- */
+        .right-col {
+            width: 65%;
+            padding: 40px;
+        }
+
+        .header-name h1 {
+            font-size: 2.5rem;
+            color: var(--dark-bg);
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .header-name h2 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        .main-section { margin-top: 35px; }
+
+        .section-title-main {
+            font-size: 1.2rem;
+            color: var(--dark-bg);
+            text-transform: uppercase;
+            font-weight: 900;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .resume-text {
+            color: var(--text-grey);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .experience-item { margin-bottom: 25px; }
+        
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        
+        .exp-role { font-weight: bold; font-size: 1.1rem; color: #333; }
+        .exp-company { font-weight: 500; color: var(--primary-color); }
+        .exp-date { font-size: 0.85rem; color: #888; font-style: italic; }
+
+        .project-box {
+            background: var(--bg-grey);
+            padding: 15px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 5px 5px 0;
+            margin-top: 10px;
+        }
+        .project-title { font-weight: bold; color: #333; display: block; margin-bottom: 5px; }
+
+        /* Ajustes para Impressão */
+        @media print {
+            body { background: white; padding: 0; }
+            .resume-page { box-shadow: none; width: 100%; height: 100%; }
+            /* Garante que as cores de fundo apareçam na impressão */
+            .left-col { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+
+        /* Responsivo para celular (apenas visualização) */
+        @media (max-width: 768px) {
+            .resume-page { flex-direction: column; width: 100%; height: auto; }
+            .left-col, .right-col { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-page">
+        
+        <aside class="left-col">
+            <img src="perfil.webp" alt="Davi Coutinho" class="profile-img">
+
+            <div class="contact-section">
+                <div class="section-title-side">Contato</div>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i> Maceió - AL
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i> (82) 99142-9724
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:davicoutinho442@gmail.com">davicoutinho442...</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/davi-coutinho-860b462ab" target="_blank">in/davi-coutinho</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/feijaomxx" target="_blank">github.com/feijaomxx</a>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <div class="section-title-side">Habilidades</div>
+                
+                <div style="margin-bottom: 15px;">
+                    <small style="color:#aaa; text-transform:uppercase; font-size:0.7rem;">Web & Desenvolvimento</small><br>
+                    <span class="skill-tag">HTML5 / CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C / C++</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Google Apps Script</span>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <small style="color:#aaa; text-transform:uppercase; font-size:0.7rem;">Ferramentas</small><br>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Git / GitHub</span>
+                    <span class="skill-tag">Pacote Office</span>
+                    <span class="skill-tag">Google Sheets</span>
+                </div>
+
+                <div>
+                    <small style="color:#aaa; text-transform:uppercase; font-size:0.7rem;">Soft Skills</small><br>
+                    <span class="skill-tag">Liderança de Equipe</span>
+                    <span class="skill-tag">Proatividade</span>
+                    <span class="skill-tag">Autodidata</span>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <div class="section-title-side">Idiomas</div>
+                <div class="contact-item">
+                    <span>Inglês Técnico (Básico)</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="right-col">
+            
+            <header class="header-name">
+                <h1>Davi Coutinho</h1>
+                <h2>Estudante de Sistemas de Informação</h2>
+            </header>
+
+            <section class="main-section">
+                <h3 class="section-title-main"><i class="fa-solid fa-user"></i> Perfil Profissional</h3>
+                <p class="resume-text">
+                    Estudante do 4º período de Sistemas de Informação, autodidata e proativo. Atuo como freelancer desenvolvendo soluções web focadas em gestão para setores automotivo e logístico. Tenho experiência prática em liderança de equipes e busco uma oportunidade de estágio para aplicar conhecimentos avançados em programação (Front-end e Dados) e agregar valor real aos projetos da empresa.
+                </p>
+            </section>
+
+            <section class="main-section">
+                <h3 class="section-title-main"><i class="fa-solid fa-briefcase"></i> Experiência Profissional</h3>
+                
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Desenvolvedor Web Freelancer</span>
+                        <span class="exp-date">Atual</span>
+                    </div>
+                    <span class="exp-company">Projetos Autônomos</span>
+                    <p class="resume-text" style="margin-top: 10px;">
+                        Desenvolvimento, em conjunto com equipe própria, de websites de gestão para empresas dos setores de concessionárias, financeiro, mecânico e logístico.
+                    </p>
+                    
+                    <div class="project-box">
+                        <span class="project-title"><i class="fa-solid fa-star" style="color:var(--primary-color)"></i> Projeto Destaque: Portal Facilita</span>
+                        <p class="resume-text" style="font-size: 0.9rem;">
+                            Criação de um sistema web responsivo para gestão de vendas veiculares.
+                            <br><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript, Google Apps Script.
+                            <br><strong>Principais entregas:</strong> Dashboard interativo com KPIs, sistema de ranking de vendedores com filtragem dinâmica por unidade e gerador automático de contratos em PDF.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Gestão & Desenvolvimento</span>
+                        <span class="exp-date">Período Anterior</span>
+                    </div>
+                    <span class="exp-company">Alma Viva Experience</span>
+                    <p class="resume-text" style="margin-top: 5px;">
+                        Atuação na gestão de equipes e desenvolvimento intermediário utilizando o ecossistema Office 365, otimizando processos internos.
+                    </p>
+                </div>
+            </section>
+
+            <section class="main-section">
+                <h3 class="section-title-main"><i class="fa-solid fa-graduation-cap"></i> Formação Acadêmica</h3>
+                
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Bacharelado em Sistemas de Informação</span>
+                        <span class="exp-date">Conclusão: Jul/2028</span>
+                    </div>
+                    <span class="exp-company">Universidade CESMAC</span>
+                    <p class="resume-text">
+                        4º Período em curso. Foco em algoritmos, desenvolvimento de software e banco de dados.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
+
