@@ -189,21 +189,6 @@
             font-style: italic;
         }
 
-        .project-box {
-            background: var(--bg-grey);
-            padding: 15px;
-            border-left: 4px solid var(--primary-color);
-            border-radius: 0 5px 5px 0;
-            margin-top: 10px;
-        }
-
-        .project-title {
-            font-weight: bold;
-            color: #333;
-            display: block;
-            margin-bottom: 5px;
-        }
-
         /* Ajustes para Impressão */
         @media print {
             body {
@@ -217,14 +202,13 @@
                 height: 100%;
             }
 
-            /* Garante que as cores de fundo apareçam na impressão */
             .left-col {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
         }
 
-        /* Responsivo para celular (apenas visualização) */
+        /* Responsivo para telemóvel */
         @media (max-width: 768px) {
             .resume-page {
                 flex-direction: column;
@@ -276,9 +260,10 @@
                 <div style="margin-bottom: 15px;">
                     <small style="color:#aaa; text-transform:uppercase; font-size:0.7rem;">Web &
                         Desenvolvimento</small><br>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
                     <span class="skill-tag">HTML5 / CSS3</span>
                     <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">Python</span>
                     <span class="skill-tag">C / C++</span>
                     <span class="skill-tag">SQL</span>
                     <span class="skill-tag">Google Apps Script</span>
@@ -294,7 +279,7 @@
 
                 <div>
                     <small style="color:#aaa; text-transform:uppercase; font-size:0.7rem;">Soft Skills</small><br>
-                    <span class="skill-tag">Liderança de Equipe</span>
+                    <span class="skill-tag">Liderança de Equipa</span>
                     <span class="skill-tag">Proatividade</span>
                     <span class="skill-tag">Autodidata</span>
                 </div>
@@ -303,7 +288,7 @@
             <div class="skills-section">
                 <div class="section-title-side">Idiomas</div>
                 <div class="contact-item">
-                    <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Portugues <br> Inglês Basico</span> 
+                    <span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Português (Nativo) <br> Inglês (Básico)</span> 
                 </div>
             </div>
         </aside>
@@ -318,10 +303,7 @@
             <section class="main-section">
                 <h3 class="section-title-main"><i class="fa-solid fa-user"></i> Perfil Profissional</h3>
                 <p class="resume-text">
-                    Estudante do 4º período de Sistemas de Informação, autodidata e proativo. Atuo como freelancer
-                    desenvolvendo soluções web focadas em gestão para setores automotivo e logístico. Tenho experiência
-                    prática em liderança de equipes e busco uma oportunidade de estágio para aplicar conhecimentos
-                    avançados em programação (Front-end e Dados) e agregar valor real aos projetos da empresa.
+                    Estudante do 4º período de Sistemas de Informação, autodidata e proativo. Busco uma oportunidade de estágio para aplicar os meus conhecimentos avançados em programação (Front-end e Dados), com forte interesse e foco de carreira nas linguagens <strong>Python</strong> e <strong>Java</strong>. Atualmente, lidero o desenvolvimento do projeto <strong>"Facilita"</strong> (um sistema de CRM completo com gestão de stock e financeira) e atuo no desenvolvimento de soluções web para a automatização de processos. Tenho experiência prática em liderança de equipas e estou pronto para acrescentar valor real aos projetos da empresa.
                 </p>
             </section>
 
@@ -330,54 +312,38 @@
 
                 <div class="experience-item">
                     <div class="exp-header">
-                        <span class="exp-role">Desenvolvedor Web Freelancer</span>
-                        <span class="exp-date">Atual</span>
+                        <span class="exp-role">Desenvolvedor Web / Fundador</span>
+                        <span class="exp-date">Dez/2025 – Atual</span>
                     </div>
-                    <span class="exp-company">Projetos Autônomos</span>
+                    <span class="exp-company">A.S Systems & Projetos Autônomos (Freelancer)</span>
                     <p class="resume-text" style="margin-top: 10px;">
-                        Desenvolvimento, em conjunto com equipe própria, de websites de gestão para empresas dos setores
-                        de concessionárias, financeiro, mecânico e logístico.
+                        Líder de equipa e analista de dados na minha própria empresa de desenvolvimento web. Desenvolvimento e implementação do sistema <strong>"Facilita"</strong> (CRM com gestão de stock e financeira). Criação de websites de gestão para automatizar processos internos em empresas dos setores automóvel (concessionários), financeiro, mecânico e logístico.
                     </p>
-
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <span class="exp-role" style="margin-top: 15px;">A.S Systems</span>
-                            <span class="exp-date">Atual</span>
-                        </div>
-                        <span class="exp-company">Empresa Software Web</span>
-                        <p class="resume-text" style="margin-top: 10px;">
-                            Hoje possuo uma empresa de desenvolvimento web, onde atuo como líder e analista de dados,
-                            focada em soluções de gestão automatizando processos internos para empresas de diversos
-                            setores, como concessionárias, financeiro, mecânico e logístico.
-                        </p>
-
-
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <span class="exp-role">Gestão & Desenvolvimento</span>
-                            <span class="exp-date">Período Anterior</span>
-                        </div>
-                        <span class="exp-company">Alma Viva Experience</span>
-                        <p class="resume-text" style="margin-top: 5px;">
-                            Atuação na gestão de equipes e desenvolvimento intermediário utilizando o ecossistema Office
-                            365, otimizando processos internos.
-                        </p>
-                    </div>
-            </section>
-
-            <section class="main-section">
-                <h3 class="section-title-main"><i class="fa-solid fa-graduation-cap"></i> Formação Acadêmica</h3>
+                </div>
 
                 <div class="experience-item">
                     <div class="exp-header">
-                        <span class="exp-role">Bacharelado em Sistemas de Informação</span>
-                        <span class="exp-date">Conclusão: Jul/2028</span>
+                        <span class="exp-role">Backoffice, Gestão e Telemarketing</span>
+                        <span class="exp-date">Jun/2024 – Mar/2026</span>
+                    </div>
+                    <span class="exp-company">Alma Viva Experience</span>
+                    <p class="resume-text" style="margin-top: 5px;">
+                        Atuação em rotinas de backoffice, atendimento ao cliente (telemarketing) e gestão de equipas. Desenvolvimento intermediário utilizando o ecossistema Office 365 para a otimização e melhoria dos processos internos da operação.
+                    </p>
+                </div>
+            </section>
+
+            <section class="main-section">
+                <h3 class="section-title-main"><i class="fa-solid fa-graduation-cap"></i> Formação Académica</h3>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-role">Bacharelato em Sistemas de Informação</span>
+                        <span class="exp-date">Jul/2024 – Jul/2028 (Previsão)</span>
                     </div>
                     <span class="exp-company">Universidade CESMAC</span>
                     <p class="resume-text">
-                        4º Período em curso. Foco em algoritmos, desenvolvimento de software e banco de dados.
+                        4º Período em curso. Foco em algoritmos, desenvolvimento de software e bases de dados.
                     </p>
                 </div>
             </section>
